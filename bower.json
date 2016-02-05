@@ -1,6 +1,6 @@
 {
   "name": "echarts-component",
-  "description": "A powerful charting and visualization library for browser",
+  "description": "A polymer component wrapper of echarts",
   "keywards": ["web-components"],
   "authors": [],
   "license": "MIT",
