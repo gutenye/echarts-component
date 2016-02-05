@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test echarts-component</title>
+  <script> var pd = console.log.bind(console) </script>
+  <link rel="import" href="bower_components/echarts-component/echarts-component.html">
+</head>
+<dom-module id="my-app">
+<template>
+  <echarts-component width="700px" height="400px" options={{options}}> </echarts-component>
+</template>
+</dom-module>
+<script>
+  var $ = function(selector) { return typeof selector === "string" ? document.querySelector(selector) : selector || null }
+  var $$ = function(selector) { return [].slice.call(document.querySelectorAll(selector)) }
+  Polymer({
+    is: "my-app",
+    ready() {
+      this.options = {
+        title: {text: "Expenses"},
+        tooltip: {},
+        legend: {data: ["line-a", "line-b"]},
+        xAxis: {type: "category", data: ["Mon", "Feb", "Tue", "Thu"]},
+        yAxis: {},
+        series: [
+          {name: "line-a", type: "line", data: [1, 2, 3, 4]},
+          {name: "line-b", type: "line", data: [2, 2, 1, 0]}
+        ]
+      }
+    }
+  })
+</script>
+<body>
+  <my-app></my-app>
+</body>
+</html>

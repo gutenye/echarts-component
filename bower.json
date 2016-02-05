@@ -1,0 +1,18 @@
+{
+  "name": "echarts-component",
+  "description": "A powerful charting and visualization library for browser",
+  "keywards": ["web-components"],
+  "authors": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "polymer/polymer",
+    "echarts": "3.0.2"
+  }
+}

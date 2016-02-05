@@ -1,0 +1,33 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="../echarts/dist/echarts.min.js"></script>
+
+<dom-module id="echarts-component">
+<template>
+  <div id="chart" style$={{computedStyle(width,height)}}></div>
+</template>
+</dom-module>
+
+<script>
+"use strict";
+Polymer({
+  is: "echarts-component",
+
+  properties: {
+    options: { type: Object, observer: "optionsChanged" },
+    width: {type: "string", value: "600px" },
+    height: {type: "string", value: "300px" },
+  },
+
+  ready() {
+    this.chart = echarts.init(this.$.chart)
+  },
+
+  optionsChanged(options) {
+    this.chart.setOption(options)
+  },
+
+  computedStyle(width, height) {
+    return `width:${width};height:${height}`
+  }
+})
+</script>
