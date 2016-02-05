@@ -23,7 +23,7 @@ Polymer({
   },
 
   optionsChanged(options) {
-    this.chart.setOption(options)
+    this.chart.setOption(options || {})
   },
 
   computedStyle(width, height) {
